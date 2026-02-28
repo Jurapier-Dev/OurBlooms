@@ -1,0 +1,184 @@
+:root {
+    --t-color-head:black;
+    --t-color-body1:#2C2825;
+    --t-color-body2:rgba(0, 0, 0, 0.6);
+    --t-color-caption:#575757;
+    --bg-color-button:#FFC800;
+    --bg-color-line:#595959;
+    --t-size-caption:14px;
+    --t-size-head1:50px;
+    --t-size-head2:40px;
+    --t-size-head3:30px;
+    --t-size-head4:20px;
+}
+
+header {
+    .title-gallery {
+        font-size:var(--t-size-head1);
+        font-weight:bolder;
+    }
+    .head-wrap {
+        display:grid;
+        grid-template-columns: 150px 1fr;
+        gap:40px;
+        .seasonal {
+            color:var(--t-color-body1);
+            font-size:var(--t-size-caption);
+        }
+        .flowers-wrap {
+            display:grid;
+            gap:10px;
+            grid-template-columns:repeat(3,1fr);
+            /* border:2px solid green; */
+            .flower-card {
+                /* border:3px solid yellow; */
+                .title {
+                    text-transform:uppercase;
+                    display:inline-block;
+                    color:var(--t-color-body1);
+                    font-size:var(--t-size-head4);
+                    font-weight:bold;
+                }
+                .price {
+                    color:var(--t-color-caption);
+                    display:inline-block;
+                    font-size:var(--t-size-caption);
+                    margin-left:5px;
+                }
+                .product {
+                    margin-top:15px;
+                    img {
+                        width:100%;
+                        border-radius:30px;
+                        display:block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    .services-con {
+        margin-top:200px;
+        display:grid;
+        gap:40px;
+        grid-template-columns: 150px 1fr;
+        .services-title {
+            color:var(--t-color-body1);
+            font-size:var(--t-size-caption);
+        }
+        .services-wrap {
+            display:grid;
+            gap:40px;
+            .service-card {
+                /* border:2px solid blue; */
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                border-top:2px solid var(--bg-color-line);
+                border-radius:2px;
+                gap:20px;
+                padding:30px 0;
+                max-width:100%;
+                .card-title {
+                    text-transform:uppercase;
+                    font-size:var(--t-size-head2);
+                    font-weight:bolder;
+                }
+                .card-info {
+                    margin-top:20px;
+                    font-size:var(--t-size-caption);
+                }
+                figure {
+                    img {
+                        display:block;
+                        width:100%;
+                        aspect-ratio:1/1;
+                        object-fit:cover;
+                        border-radius:30px;
+                    }
+                }
+            }
+        }
+    }
+    figure {
+            img {
+                display:block;
+                width:100%;
+                border-radius:30px;
+                object-fit:cover;
+                aspect-ratio:16/9;
+            }
+        }
+    .work-with-us {
+        text-align:center;
+        display:grid;
+        gap:40px;
+        padding:150px;
+        place-items:center;
+        .content {
+            display:grid;
+            gap:20px;
+            p {
+                font-size:var(--t-size-caption);
+                color:var(--t-color-caption);
+                font-weight:500;
+            }
+            h2 {
+                font-size:var(--t-size-head2);
+                font-weight:bold;
+            }
+        }
+    }
+}
+@media (max-width:1279px) {
+    header {
+        .head-wrap {
+            grid-template-columns:1fr;
+        }
+    }
+    main {
+        .services-con{
+            grid-template-columns:1fr;
+        }
+        .work-with-us {
+                padding: 150px 120px;
+                .content h2{
+                    font-size:var(--t-size-head2);
+                }
+            }
+    }
+}
+@media (max-width:1049px) {
+    header {
+        .head-wrap {
+            .flowers-wrap {
+                grid-template-columns:1fr 1fr;
+            }
+        }
+    }
+}
+@media (max-width:799px) {
+    header {
+        .head-wrap {
+            .flowers-wrap {
+                grid-template-columns:1fr;
+            }
+        }
+    }
+    main {
+        .work-with-us {
+                padding:80px 40px;
+                .content h2{
+                    font-size:var(--t-size-head3);
+                }
+            }
+        .services-con {
+            .services-wrap {
+                .service-card {
+                    grid-template-columns:1fr;
+                }
+            }
+        }
+    }
+}
