@@ -11,7 +11,9 @@
     --t-size-head3:30px;
     --t-size-head4:20px;
 }
-
+img {
+    image-rendering: auto;
+}
 header {
     padding:100px 0 0 0px;
     margin-bottom:60px;

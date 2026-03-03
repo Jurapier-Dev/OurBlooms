@@ -18,6 +18,9 @@
     --t-size-head3:30px;
     --t-size-head4:20px;
 }
+img {
+    image-rendering: auto;
+}
 .line ,.line-small{
     border-bottom:2px solid var(--bg-color-line);
     border-radius:2px;
